@@ -45,9 +45,3 @@ fi
 
 # Start supervisord and services
 /usr/bin/supervisord -n -c /etc/supervisord.conf
-
-# mycrypt conf
-ln -s /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available/mcrypt.ini
-php5enmod mcrypt
-service php5-fpm restart
-service nginx restart
