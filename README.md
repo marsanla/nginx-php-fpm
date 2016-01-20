@@ -157,3 +157,11 @@ In order to speed up install time if templating is not required and you have a l
 ### Template anything
 Yes ***ANYTHING***, any variable exposed by a linked container or the **-e** flag lets you template your config files. This means you can add redis, mariaDB, memcache or anything you want to your application very easily.
 
+### MyCrypt
+Execute this inside the docker
+
+# mycrypt conf
+ln -s /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available/mcrypt.ini
+php5enmod mcrypt
+service php5-fpm restart
+service nginx restart
