@@ -161,7 +161,9 @@ Yes ***ANYTHING***, any variable exposed by a linked container or the **-e** fla
 Execute this inside the docker
 
 # mycrypt conf
+```shell
 ln -s /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available/mcrypt.ini
 php5enmod mcrypt
 service php5-fpm restart
 service nginx restart
+```
